@@ -1,72 +1,138 @@
-﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
-
+﻿        Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 int pengar = 100;
 
-    Console.WriteLine($"Du har {pengar}kr kvar du måste skaffa ett jobb😭");
+Console.WriteLine($"Du har {pengar} kr kvar, du MÅSTE skaffa ett extra jobb 😭");
+
+Console.WriteLine("Vad vill du köpa idag?");
+Console.WriteLine(".1 / En fin diamant ring 👀 , 20 riksdaler");
+Console.WriteLine(".2 / Simon läckra öron snibbar 🤤 , 50 riksdaler");
+Console.WriteLine(".3 / Privat programmerings lektioner av Kevin😳, 100 riksdaler");
+
+string val = Console.ReadLine();
 
 
-    Console.WriteLine("Vilket föremål skulle du vilja tillförskaffa idag?🥺");
-    Console.WriteLine("Val.1 En fin diamant ring👀, 𝓽𝓳𝓾𝓰𝓸 𝓴𝓻𝓸𝓷𝓸𝓻");
-    Console.WriteLine("Val.2 Simons bodypillow🤤, 𝓽𝓻𝓮𝓽𝓽𝓲𝓸 𝓯𝓮𝓶 𝓴𝓻𝓸𝓷𝓸𝓻");
-    Console.WriteLine("Val.3 Ludvigs lurviga ludd💖, 𝓯𝔂𝓻𝓽𝓲𝓸 𝓴𝓻𝓸𝓷𝓸𝓻");
-    string jhonpork = "";   
+int priset = 0;
+if (val == "1") priset = 20;
+else if (val == "2") priset = 50;
+else if (val == "3") priset = 100;
 
-    while   (jhonpork != "1" && jhonpork != "2" && jhonpork != "3")
-      {
-        jhonpork = Console.ReadLine();
-      }
+Console.WriteLine("Hur många vill du köpa?");
+int antal = int.Parse(Console.ReadLine());
+
+
+int helkostnad = pengar * antal;
+
+
+if (helkostnad > pengar)
+{
+    Console.WriteLine("Du har tyvärr inte råd med detta😂 ");
+}
+
+else 
+
+{
+    pengar -= helkostnad;
+      Console.WriteLine($"Superb val min vän! Du har {pengar}kr kvar.");
+}
+
+Console.ReadLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+
+// int pengar = 100;
+
+//     Console.WriteLine($"Du har {pengar}kr kvar du måste skaffa ett jobb😭");
+
+
+//     Console.WriteLine("Vilket föremål skulle du vilja tillförskaffa idag?🥺");
+//     Console.WriteLine("Val.1 En fin diamant ring👀, 𝓽𝓳𝓾𝓰𝓸 𝓴𝓻𝓸𝓷𝓸𝓻");
+//     Console.WriteLine("Val.2 Simons bodypillow🤤, 𝓽𝓻𝓮𝓽𝓽𝓲𝓸 𝓯𝓮𝓶 𝓴𝓻𝓸𝓷𝓸𝓻");
+//     Console.WriteLine("Val.3 Ludvigs lurviga ludd💖, 𝓯𝔂𝓻𝓽𝓲𝓸 𝓴𝓻𝓸𝓷𝓸𝓻");
+//     string jhonpork = "";   
+
+//     while   (jhonpork != "1" && jhonpork != "2" && jhonpork != "3")
+//       {
+//         jhonpork = Console.ReadLine();
+//       }
     
 
 
 
-int prisjhonpork = 0;
+// int prisjhonpork = 0;
 
 
-if(jhonpork =="1")
-{
+// if(jhonpork =="1")
+// {
 
-    prisjhonpork = 20;
-}
-else if(jhonpork =="2")
+//     prisjhonpork = 20;
+// }
+// else if(jhonpork =="2")
 
-{
-    prisjhonpork =35;
-}
+// {
+//     prisjhonpork =35;
+// }
 
-else if(jhonpork=="3")
-{
-    prisjhonpork = 40;
-}
-
-
-Console.WriteLine("Hur många vill du köpa?");
-string antal = Console.ReadLine();
-
-int antalnum = 0;
-
-bool success = int.TryParse(antal, out antalnum);
+// else if(jhonpork=="3")
+// {
+//     prisjhonpork = 40;
+// }
 
 
+// Console.WriteLine("Hur många vill du köpa?");
+// string antal = Console.ReadLine();
 
-if (success == false)
+// int antalnum = 0;
+
+// bool success = int.TryParse(antal, out antalnum);
 
 
-{
-Console.WriteLine("Hur många vill köpa med en siffra 😡");
-}
+
+// if (success == false)
 
 
-if( pengar < (prisjhonpork * antalnum)) {
-    Console.WriteLine("DET GÅR INTE");
-}
-else {
-pengar = pengar - prisjhonpork * antalnum;
-}
+// {
+// Console.WriteLine("Hur många vill köpa med en siffra 😡");
+// }
 
-Console.WriteLine($"Superb val min vän.\ndu har {pengar} kr kvar");
 
-Console.ReadLine();
+// if( pengar < (prisjhonpork * antalnum)) {
+//     Console.WriteLine("DET GÅR INTE");
+// }
+// else {
+// pengar = pengar - prisjhonpork * antalnum;
+// }
+
+// Console.WriteLine($"Superb val min vän.\ndu har {pengar} kr kvar");
+
+// Console.ReadLine();
 
 
 
